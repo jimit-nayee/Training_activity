@@ -2,8 +2,31 @@
 <html lang="en">
 <head>
     <title>Document</title>
+    <style>
+        div{
+            margin: 15px;
+        }
+        #btn{
+            padding-left: 100px;
+        }
+</style>
+    <script src="match.js"></script>
 </head>
 <body>
-    
+    <div>
+        Name of Team 1 <input type="text" id="name1"><br>
+    </div>
+    <div>
+        Score of Team 1 <input type="text" id="score1"><br>
+    </div>
+    <div>
+        Name of Team 2 <input type="text" id="name2"><br>
+    </div>
+    <div>
+        Score of Team 2 <input type="text" id="score2"><br>
+    </div>
+    <div id="btn">
+        <button onclick="math()">submit</button>
+    </div>
 </body>
 </html>
