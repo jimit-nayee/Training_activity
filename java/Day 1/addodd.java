@@ -25,5 +25,6 @@ class addodd
             n = n /10;
         }
         System.out.print(sum);
+        s.close();
     }
 }
