@@ -1,67 +1,54 @@
-public class Vehicle {
-    private String make;
-    private String  vechicleNumber;
-    private String fuelType;  
-    private int fuelCapacity;
-    private int cc;
-
-    public Vehicle()
-    {
-
-    }
-    public Vehicle(String make,String vehicleNumber,String fuelType,int fuelCapacity,int cc)
-    {
+public class Vehicle{
+    private String make,vehicleNum,fuelType;
+    private int fuelCapacity,cc;
+     Vehicle(String make,String vehicleNum, String fuelType,int fuelCapacity, int cc ){
         this.make=make;
-        this.vechicleNumber=vehicleNumber;
-        this.fuelType=fuelType;
-        this.fuelCapacity=fuelCapacity;
-        this.cc=cc;
+        this.fuelCapacity = fuelCapacity;
+        this.vehicleNum = vehicleNum;
+        this.fuelType = fuelType;
+        this.cc = cc;
+     }
+     public void setCc(int cc) {
+         this.cc = cc;
+     }
+     public int getCc() {
+         return cc;
+     }
+     public void setFuelCapacity(int fuelCapacity) {
+         this.fuelCapacity = fuelCapacity;
+     }
+     public int getFuelCapacity() {
+         return fuelCapacity;
+     }
+     public void setFuelType(String fuelType) {
+         this.fuelType = fuelType;
+     }
+     public String getFuelType() {
+         return fuelType;
+     }
+     public String getMake() {
+         return make;
+     }
+     public void setMake(String make) {
+         this.make = make;
+     }
+     public String getVehicleNum() {
+         return vehicleNum;
+     }
+     public void setVehicleNum(String vehicleNum) {
+         this.vehicleNum = vehicleNum;
+     }
+    public void displayMake() {
+            System.out.println("Make type : "+ this.make);
+            
+        }
+    public void displayBasicInfo(){
+        System.out.println("The Fuel capacity is :"+ this.fuelCapacity);
+        System.out.println("The vehicle number is :"+ this.vehicleNum);
+        System.out.println("The fuel type of vehicle is : "+ this.fuelType);
+        System.out.println("The CC of vehicle is : "+this.cc);
     }
+    public void displayDetailInfo(){
 
-    public void setVehicleNumber(String vehicleNumber)
-    {
-        this.vechicleNumber=vehicleNumber;
     }
-    public void setFuelType(String fuelType)
-    {
-        this.fuelType=fuelType;
-    }
-
-    public void setFuelCapacity(int fuelCapacity)
-    {
-        this.fuelCapacity=fuelCapacity;
-    }
-    public void setCc(int cc)
-    {
-        this.cc=cc;
-    }
-
-    public String getVehicleNumber()
-    {
-       return this.vechicleNumber;
-    }
-    public String getFuelType()
-    {
-       return this.fuelType;
-    }
-
-    public int getFuelCapacity()
-    {
-        return this.fuelCapacity;
-    }
-    public int getCc()
-    {
-          return this.cc;
-    }
-
-    public void displayMake()
-    {
-        
-        System.out.println("Make by: "+this.make);
-        System.out.println("Vechicle number: "+ this.vechicleNumber);
-        System.out.println("Fuel type: "+this.fuelType);
-        System.out.println("Fuel Capactity : "+ this.fuelCapacity);
-        System.out.println("CC: "+this.cc);
-    }
-
 }

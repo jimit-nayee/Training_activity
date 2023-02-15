@@ -48,6 +48,6 @@ class task1{
         for (Object object : l1) {
             System.out.println(object);
         }
-
+        s.close();
     }
 }
