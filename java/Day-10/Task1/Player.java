@@ -1,10 +1,14 @@
 import java.time.LocalDate;
 
 class Player{
-    private String name , skill , nationality;
-    private int mathces , runs , wickets;
+    private String name;
+    private LocalDate dob ;
+    private String skill;
+    private int matches;
+    private int runs;
+    private int wickets;
+    private String nationality;
     private double runrate;
-    LocalDate dob ;
 
     public String getName() {
         return name;
@@ -28,10 +32,10 @@ class Player{
     }
 
     public int getMathces() {
-        return mathces;
+        return matches;
     }
     public void setMathces(int mathces) {
-        this.mathces = mathces;
+        this.matches = mathces;
     }
 
     public int getRuns() {
@@ -66,11 +70,11 @@ class Player{
 
     }
 
-    public Player(String name, LocalDate dob, String skill,  int mathces, int runs, int wickets,String nationality, double runrate) {
+    public Player(String name, LocalDate dob, String skill,  int matches, int runs, int wickets,String nationality, double runrate) {
         this.name = name;
         this.skill = skill;
         this.nationality = nationality;
-        this.mathces = mathces;
+        this.matches = matches;
         this.runs = runs;
         this.wickets = wickets;
         this.runrate = runrate;

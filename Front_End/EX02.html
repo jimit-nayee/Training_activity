@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #idnum{
+            margin-left: 5%;
+        }
+        #name{
+            margin-left: 3%;
+        }
+        #runs{
+            margin-left: 1%;
+        }
+        table,th,td{
+            border-collapse: collapse;
+            margin: 20px;
+            padding: 7px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <form  >
+        <label>Player id:</label><input type="number"id="idnum"><br><br>
+        <label>Player Name:</label> <input type="text" id="name"><br><br>
+        <label>Player Total Runs:</label> <input type="number" id="runs"><br><br>
+        <button type="button" onclick="getdetails()">Add Player</button>&nbsp &nbsp &nbsp &nbsp &nbsp
+        <button type="button" onclick="removedetails()" >Remove</button>
+    </form>
+
+    <table id="details" border="1" >
+        <tr>
+            <th>
+                <label>Player ID</label>
+            </th>
+
+            <th>
+                <label>Player Name</label>
+            </th>
+            
+            <th>
+                <label>Player Runs</label>
+            </th>
+            <th>
+                <label>Check the box for remove</label>
+            </th>
+        </tr>
+        
+        <tbody id="playerTable">
+            <input type="checkbox" id="c_box">
+        </tbody>
+    </table>
+    <p id="id1"></p>
+    </center>
+</body>
+<script>
+    function getdetails() {
+
+        var pid = document.getElementById("idnum").value;
+        var pname = document.getElementById("name").value;
+        var pruns = document.getElementById("runs").value;
+        var c_box = document.getElementById("c_box").value;
+
+        var table = document.getElementById("playerTable");
+        var newRow = table.insertRow();
+
+        var idCell = newRow.insertCell(0);
+        var nameCell = newRow.insertCell(1);
+        var runsCell = newRow.insertCell(2);
+        
+
+        //var checkbox = table.rows[i].cells[3].querySelector("input[type=checkbox]");
+
+        idCell.innerHTML = pid;
+        nameCell.innerHTML = pname;
+        runsCell.innerHTML = pruns;
+
+        document.getElementById("pid").value = "";
+        document.getElementById("pname").value = "";
+        document.getElementById("pruns").value = "";
+    }
+    function removedetails(){
+        var table = document.getElementById("playerTable")
+        for(var i = 1; i <table.rows.length; i++){ 
+            var checkbox = table.rows[i].cells[3].querySelector("input[type=checkbox]");
+            if(checkbox.checked){
+                table.deleteRow(i);
+                i--;
+            }
+        }
+    }
+</script>
+</html>

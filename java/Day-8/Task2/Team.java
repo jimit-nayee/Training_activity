@@ -20,9 +20,6 @@ public class Team {
     }
     @Override
     public String toString() {
-        return name+" ---- " +matches;
+        return name+" - " +matches;
     }
-    
-
-    
 }

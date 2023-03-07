@@ -11,5 +11,11 @@ public class PlayerComparator implements Comparator<Player>{
 		
 		return o1.getName().compareTo(o2.getName());
 	}
+
+	@Override
+	public int compare(Player o1, Player o2) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 }

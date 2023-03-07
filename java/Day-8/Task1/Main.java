@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Main{
-    public static void main(String[] args) {
+    public static <Player> void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number of player you want to register");
         int n = sc.nextInt();sc.nextLine();

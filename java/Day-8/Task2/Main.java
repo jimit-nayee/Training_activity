@@ -6,16 +6,16 @@ import java.util.Collections;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter number of Teams you want to add ");
+        System.out.print("Enter number of Teams you want to add: ");
         int n = sc.nextInt();sc.nextLine();
         ArrayList <Team> al = new ArrayList<Team>();
         String name = null;
         long matches = 0;
         for(int i=0;i<n;i++){
             System.out.println("Enter team "+(i+1)+" detail");
-            System.out.println("Enter name :");
+            System.out.print("Enter name : ");
             name = sc.nextLine();
-            System.out.println("Enter number of matches played");
+            System.out.print("Enter number of matches played : ");
             matches = sc.nextLong();sc.nextLine();
             al.add(new Team(name, matches));
         }
