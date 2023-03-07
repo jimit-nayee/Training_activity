@@ -1,0 +1,24 @@
+
+ALL QUERIES OF THE GIVEN ACTIVITIES: 
+
+
+
+1. select productions.production_id, productions,production_name, COUNT(*) AS total_movie from productions INNER JOIN movie ON production.production_id = movie.production_id GROUP BY productions.production_id, productions.production_name;
+
+2. select productions.production_id,productions.production_name,count(movie.production_id) from movie join productions on movie.production_id=productions.production_id group by movie.production_id having count(movie.production_id)>2;
+
+3. select productions.production_name, productions.owner_name from productions Inner Join Movie ON productions.production_id = movie.production_id Group By productions.owner_name,productions.production_name order by count(*) desc limit 1;
+
+4. select movie.hero_name from movie inner join productions on movie.production_id = productions.production_id where owner_name='Subaskaran';
+
+5. select movie_name,hero_name from movie where production_id like '%82';
+
+6. select production_name,owner_name from productions where production_id NOT IN (select productions.production_id from movie inner join productions on productions.production_id=movie.production_id);
+
+7. select productions.production_id,productions.owner_name from movie inner join productions on productions.production_id=movie.production_id where movie.language='hindi';
+
+8. select heroine_name	,production_id from movie group by heroine_name,production_id;
+
+9. select m.hero_name from movie m Inner Join productions p ON m.production_id=p.production_id group by m.hero_name order by count(m.language) desc limit 1;
+
+10.select p.production_name,p.owner_name from movie m Inner Join productions p ON m.production_id=p.production_id group by p.production_name,p.owner_name order by count(m.language) desc limit 1;
