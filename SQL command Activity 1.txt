@@ -1,0 +1,23 @@
+ALL QUERIES OF THE GIVEN ACTIVITY 1: 
+
+
+1. select movie_name , movie_type from movie where movie_type="drama";
+
+2. select movie_name from movie where hero_name = "ayushman";
+
+3. select count(movie_name) from movie where length>18;
+
+4. select movie_name from movie where length = (select MIN(length) from movie);
+
+5. select * from movie where language like 't%';
+
+6. select movie_name , hero_name , heroine_name from movie where length = (select MAX(length) from movie);
+
+7. select movie_name , hero_name , heroine_name from movie where release_date > "2018-03-15";
+
+8. select count(movie_type) from movie where movie_type like "%thriller%";
+
+9. select count(movie_name) from movie where release_date < "2018-03-15";
+
+10. select release_date from movie where movie_name like "zero";
+
