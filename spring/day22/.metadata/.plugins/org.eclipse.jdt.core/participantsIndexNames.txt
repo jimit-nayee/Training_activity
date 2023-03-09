@@ -1,3 +1,0 @@
-INDEX VERSION 1.131
-C:\Users\158427\OneDrive - Arrow Electronics, Inc\Desktop\Spring\day22\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3091472076.index
-\ProjectMVC\src\main\java
