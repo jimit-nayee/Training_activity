@@ -14,6 +14,5 @@ public class UserJdbc {
 		li.add(new User("b","b@mail.com","23571","usa"));
 		li.add(new User("c","c@mail.com","2359783","aus"));
 		return li;
-		
 	}
 }
