@@ -1,8 +1,8 @@
 package com.Assignment.Assignment_movie.dao;
 
+import org.springframework.data.repository.CrudRepository;
 import com.Assignment.Assignment_movie.movie.Movie;
 
-public interface MovieDao {
+public interface MovieDao extends CrudRepository<Movie, Integer> {
 
-	public int read(Movie m);
 }

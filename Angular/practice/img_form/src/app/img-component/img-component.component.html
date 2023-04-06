@@ -1,0 +1,22 @@
+
+<form (submit)="onSubmit()">
+    <input type="text" [(ngModel)]="id" name="id" id="" />
+    <input type="submit" value="show">
+</form>
+<form (submit)="showAll()">
+  
+    <input type="submit" value="show All">
+</form>
+
+<table>
+    <tbody>
+        <tr  *ngFor="let image of images">
+            <td>{{image.id}}</td>
+            <td><img src={{image.url}}  style="width:200px;height:200px"/></td>
+        </tr>
+    </tbody>
+    <thead>
+        <th>id</th>
+        <td>image</td>
+    </thead>
+</table>

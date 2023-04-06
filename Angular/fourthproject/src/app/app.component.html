@@ -1,0 +1,15 @@
+<h1>Reactive Forms</h1>
+
+<form [formGroup]="registerfrm" (click)="getData()">
+  <input type="text" formControlName="name"><br><br>
+  <input type="password" formControlName="password"><br><br>
+  <input type="email" formControlName="email"><br><br>
+  <input type="button" value="submit">
+
+</form>
+<p>{{registerfrm.status}}
+</p>
+{{value1 | json }} <br><br>
+
+<app-demo></app-demo>
+<router-outlet></router-outlet>

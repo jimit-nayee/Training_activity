@@ -1,0 +1,36 @@
+<style>
+    
+    table, th , td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+   h2 , form , table{
+    margin-left: 40%;
+   }
+</style>
+
+<h2>Jimit Nayee - 158427</h2>
+
+<form (submit)="onSubmit()">
+    <input type="text" [(ngModel)]="login" name="txt" id=""><br>
+    <input type="submit" value="show image">
+</form>
+<form (submit)="showAll()">
+    <input type="submit" value="Show all images">
+</form>
+
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Photo</th>
+    </thead>
+    <tbody>
+        <tr  *ngFor="let image of images" >
+            <td style="width:200px;height:200px">{{image.id}}</td>
+            <td style="width:200px;height:200px">{{image.login}}</td>
+            <td><img src={{image.avatar_url}}  style="width:200px;height:200px"/></td>
+        </tr>
+    </tbody>
+</table>

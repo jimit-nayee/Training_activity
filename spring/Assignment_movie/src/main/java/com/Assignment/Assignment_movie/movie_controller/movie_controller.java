@@ -12,4 +12,9 @@ public class movie_controller {
 		return new ModelAndView("home");
 	}
 	
+	@RequestMapping("success")
+	public ModelAndView successPage() {
+		return new ModelAndView("success");
+	}
+	
 }
